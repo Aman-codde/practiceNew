@@ -8,7 +8,7 @@ export interface State {
 }
 
 export const initialState: State = {
-  squares: Array(9).fill(' '),
+  squares: Array(9).fill('-'),
 };
 
 export const reducer = createReducer(
