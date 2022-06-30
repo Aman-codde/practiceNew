@@ -7,11 +7,13 @@ import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { BoardComponent } from './components/board/board.component';
+import { PlayersDetailsComponent } from './components/players-details/players-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BoardComponent
+    BoardComponent,
+    PlayersDetailsComponent
   ],
   imports: [
     BrowserModule,
