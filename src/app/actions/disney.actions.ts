@@ -1,15 +1,15 @@
 import { createAction, props } from '@ngrx/store';
 
-export const loadDisneys = createAction(
-  '[Disney] Load Disneys'
+export const actionloadCharacters = createAction(
+  '[Disney] Load Characters'
 );
 
-export const loadDisneysSuccess = createAction(
-  '[Disney] Load Disneys Success',
+export const actionloadCharactersSuccess = createAction(
+  '[Disney] Load Characters Success',
   props<{ data: any }>()
 );
 
-export const loadDisneysFailure = createAction(
-  '[Disney] Load Disneys Failure',
+export const actionloadCharactersFailure = createAction(
+  '[Disney] Load Characters Failure',
   props<{ error: any }>()
 );

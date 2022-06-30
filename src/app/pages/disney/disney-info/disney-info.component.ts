@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Store} from '@ngrx/store';
+import { actionloadCharacters } from 'src/app/actions/disney.actions';
+import { State } from 'src/app/reducers/disney.reducer';
 import { DisneyService } from 'src/app/services/disney.service';
 
 @Component({
@@ -11,10 +14,11 @@ export class DisneyInfoComponent implements OnInit {
 
   constructor(
     private disneyService: DisneyService,
+    private store: Store<State>
   ) { }
 
   ngOnInit(): void {
-    
+    this.store.dispatch(actionloadCharacters());
   }
 
 }

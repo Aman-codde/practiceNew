@@ -8,6 +8,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { BoardComponent } from './components/board/board.component';
 import { PlayersDetailsComponent } from './components/players-details/players-details.component';
+import { EffectsModule } from '@ngrx/effects';
+import { DisneyEffects } from './effects/disney.effects';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { PlayersDetailsComponent } from './components/players-details/players-de
     AppRoutingModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    EffectsModule.forRoot([DisneyEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]
